@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CurrentWeatherViewController.swift
 //  Weather
 //
 //  Created by Tiago Oliveira on 06/06/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CurrentWeatherViewController: BaseViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func goBack(_ sender: Any) {
+        coordinator?.start()
+    }
 }
-

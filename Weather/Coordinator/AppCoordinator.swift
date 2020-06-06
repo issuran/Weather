@@ -12,6 +12,9 @@ class AppCoordinator: Coordinator {
     var window: UIWindow
     var navigationController: UINavigationController
     
+    // Login
+//    var loginCoordinator: LoginCoordinator!
+    
     required init(window: UIWindow) {
         self.window = window
         self.navigationController = UINavigationController()
@@ -20,6 +23,14 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+        let vc = HomeViewController.instantiate(.Home)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
     
+    func currentWeather() {
+        let vc = CurrentWeatherViewController.instantiate(.CurrentWeather)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+    }
 }
