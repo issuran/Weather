@@ -1,0 +1,11 @@
+framework module Aquino {
+  umbrella header "Aquino.h"
+
+  export *
+  module * { export * }
+}
+
+module Aquino.Swift {
+    header "Aquino-Swift.h"
+    requires objc
+}

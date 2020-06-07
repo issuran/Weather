@@ -17,5 +17,19 @@ class HomeViewController: BaseViewController {
     
     @IBAction func goNext(_ sender: Any) {
         coordinator?.currentWeather()
+        
+        /// Testando framework
+        let service = SignScrapService()
+        service.getSignToday(sign: "Libra") { (result) in
+            switch result {
+            case .success(_, _):
+                print("Sucesso")
+            case .failure(_):
+                print("Failure")
+            case .empty:
+                print("Empty")
+            }
+        }
+        /// Fim do teste
     }
 }
