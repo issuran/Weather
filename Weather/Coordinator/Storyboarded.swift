@@ -9,6 +9,7 @@
 import UIKit
 
 enum StoryboardsPath: String{
+    case Security = "SecurityScreen"
     case Home = "Home"
     case CurrentWeather = "CurrentWeather"
 }
@@ -23,6 +24,8 @@ extension Storyboarded where Self: UIViewController {
         /// carrega o storyboard
         var storyboard = UIStoryboard()
         switch storyboardId {
+        case .Security:
+            storyboard = UIStoryboard(name: StoryboardsPath.Security.rawValue, bundle: Bundle.main)
         case .Home:
             storyboard = UIStoryboard(name: StoryboardsPath.Home.rawValue ,bundle: Bundle.main)
         case .CurrentWeather:

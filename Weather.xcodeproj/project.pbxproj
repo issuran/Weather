@@ -26,9 +26,11 @@
 		52920A70248D499600F3A297 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A6F248D499600F3A297 /* API.swift */; };
 		52920A72248D49BA00F3A297 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A71248D49BA00F3A297 /* Service.swift */; };
 		52920A75248D49F500F3A297 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A74248D49F500F3A297 /* Model.swift */; };
-		52920A7C248D4B8500F3A297 /* Aquino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52920A7A248D4B8000F3A297 /* Aquino.framework */; };
-		52920A7D248D4B8500F3A297 /* Aquino.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52920A7A248D4B8000F3A297 /* Aquino.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52920A85248D79DC00F3A297 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A84248D79DC00F3A297 /* WeatherUITests.swift */; };
+		52920A8E248DCE3800F3A297 /* SecurityScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52920A8D248DCE3800F3A297 /* SecurityScreen.storyboard */; };
+		52920A91248DCE5100F3A297 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A90248DCE5100F3A297 /* SecurityViewController.swift */; };
+		52920A97248DD94100F3A297 /* Aquino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52920A95248DD91A00F3A297 /* Aquino.framework */; };
+		52920A98248DD94100F3A297 /* Aquino.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52920A95248DD91A00F3A297 /* Aquino.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		52920A6D248D495600F3A297 /* Embed Frameworks */ = {
+		52920A94248DD80C00F3A297 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52920A7D248D4B8500F3A297 /* Aquino.framework in Embed Frameworks */,
+				52920A98248DD94100F3A297 /* Aquino.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,10 +78,12 @@
 		52920A6F248D499600F3A297 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		52920A71248D49BA00F3A297 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		52920A74248D49F500F3A297 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		52920A7A248D4B8000F3A297 /* Aquino.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Aquino.framework; sourceTree = "<group>"; };
 		52920A82248D79DC00F3A297 /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52920A84248D79DC00F3A297 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		52920A86248D79DC00F3A297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52920A8D248DCE3800F3A297 /* SecurityScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecurityScreen.storyboard; sourceTree = "<group>"; };
+		52920A90248DCE5100F3A297 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		52920A95248DD91A00F3A297 /* Aquino.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Aquino.framework; sourceTree = "<group>"; };
 		629E07B2AADEA796085F8B02 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D492596671D484CD03E05EDB /* libPods-WeatherUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E050B3F7207F493E75EBA62A /* Pods-WeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherUITests.release.xcconfig"; path = "Target Support Files/Pods-WeatherUITests/Pods-WeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0460FD6581EFBA6D4BB119C1 /* Pods_Weather.framework in Frameworks */,
-				52920A7C248D4B8500F3A297 /* Aquino.framework in Frameworks */,
+				52920A97248DD94100F3A297 /* Aquino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +166,7 @@
 		52774877248C027500115B85 = {
 			isa = PBXGroup;
 			children = (
-				52920A7A248D4B8000F3A297 /* Aquino.framework */,
+				52920A95248DD91A00F3A297 /* Aquino.framework */,
 				52774882248C027500115B85 /* Weather */,
 				52920A83248D79DC00F3A297 /* WeatherUITests */,
 				52774881248C027500115B85 /* Products */,
@@ -208,6 +212,7 @@
 		5277489E248C1DB100115B85 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				52920A8C248DCE1C00F3A297 /* SecurityScreen */,
 				5207086D248C2BCE008C9150 /* CurrentWeather */,
 				5277489F248C1EDC00115B85 /* Home */,
 			);
@@ -243,6 +248,23 @@
 			path = WeatherUITests;
 			sourceTree = "<group>";
 		};
+		52920A8C248DCE1C00F3A297 /* SecurityScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52920A8F248DCE4100F3A297 /* View */,
+			);
+			path = SecurityScreen;
+			sourceTree = "<group>";
+		};
+		52920A8F248DCE4100F3A297 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52920A90248DCE5100F3A297 /* SecurityViewController.swift */,
+				52920A8D248DCE3800F3A297 /* SecurityScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A32FC5F682E2EA2D7A2ACB3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +296,7 @@
 				5277487C248C027500115B85 /* Sources */,
 				5277487D248C027500115B85 /* Frameworks */,
 				5277487E248C027500115B85 /* Resources */,
-				52920A6D248D495600F3A297 /* Embed Frameworks */,
+				52920A94248DD80C00F3A297 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52920A8E248DCE3800F3A297 /* SecurityScreen.storyboard in Resources */,
 				52774890248C027700115B85 /* LaunchScreen.storyboard in Resources */,
 				5277488D248C027700115B85 /* Assets.xcassets in Resources */,
 				5277488B248C027600115B85 /* Home.storyboard in Resources */,
@@ -425,6 +448,7 @@
 				5277489B248C12E500115B85 /* Coordinator.swift in Sources */,
 				5207086F248C2BE4008C9150 /* CurrentWeatherViewController.swift in Sources */,
 				52774899248C12C200115B85 /* AppCoordinator.swift in Sources */,
+				52920A91248DCE5100F3A297 /* SecurityViewController.swift in Sources */,
 				52070872248C3A09008C9150 /* BaseViewController.swift in Sources */,
 				52774884248C027600115B85 /* AppDelegate.swift in Sources */,
 				5207086C248C2A49008C9150 /* Storyboarded.swift in Sources */,
@@ -519,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -573,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

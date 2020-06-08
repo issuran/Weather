@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Security View Controller-->
+        <scene sceneID="sxn-Hy-JSw">
+            <objects>
+                <viewController storyboardIdentifier="SecurityViewController" id="2cY-EQ-bFg" customClass="SecurityViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ah-2u-5dV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-fn-7fu">
+                                <rect key="frame" x="20" y="425.5" width="374" height="45"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="i2y-07-jYg"/>
+                                </constraints>
+                                <state key="normal" title="Show me the weather!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signIn:" destination="2cY-EQ-bFg" eventType="touchUpInside" id="c2V-eJ-lwo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rpp-fn-7fu" firstAttribute="centerX" secondItem="0Ah-2u-5dV" secondAttribute="centerX" id="22F-U3-GFG"/>
+                            <constraint firstItem="Rpp-fn-7fu" firstAttribute="leading" secondItem="egb-DP-N4Y" secondAttribute="leading" constant="20" id="Mc2-yO-m9M"/>
+                            <constraint firstItem="egb-DP-N4Y" firstAttribute="trailing" secondItem="Rpp-fn-7fu" secondAttribute="trailing" constant="20" id="VZC-ET-Mx1"/>
+                            <constraint firstItem="Rpp-fn-7fu" firstAttribute="centerY" secondItem="0Ah-2u-5dV" secondAttribute="centerY" id="f32-eE-GWX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="egb-DP-N4Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Rpp-fn-7fu" id="lr5-Eq-abp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBQ-ay-SFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="88"/>
+        </scene>
+    </scenes>
+</document>

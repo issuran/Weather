@@ -23,6 +23,12 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+        let vc = SecurityViewController.instantiate(.Security)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func homeWeather() {
         let vc = HomeViewController.instantiate(.Home)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)

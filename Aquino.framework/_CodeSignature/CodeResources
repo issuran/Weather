@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		W6BFz0Gx5DHnUdwWuF6b/8qV73I=
+		RxzF5/8+gLaDTqhVVLI6KzD6sd0=
 		</data>
-		<key>Modules/Aquino.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<key>Modules/Aquino.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		VaQrHh3aeftOYc8zflMCa2bzE68=
+		GBqI5u1VAN5Br9SmGR1lzvgzzas=
 		</data>
-		<key>Modules/Aquino.swiftmodule/Project/x86_64.swiftsourceinfo</key>
+		<key>Modules/Aquino.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		VaQrHh3aeftOYc8zflMCa2bzE68=
+		GBqI5u1VAN5Br9SmGR1lzvgzzas=
 		</data>
-		<key>Modules/Aquino.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		tSlfSuLs7QB5MrTTcFRTExPem4E=
+		2fq/E0zUd7GDEgRhWDE3FVjBdW4=
 		</data>
-		<key>Modules/Aquino.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		9V+lyOJbqjD15ErIjpd61EjZ6Zw=
+		pjtg2xF7pf2I+gHa/VpnkXvpqxQ=
 		</data>
-		<key>Modules/Aquino.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/Aquino.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		tSlfSuLs7QB5MrTTcFRTExPem4E=
+		2fq/E0zUd7GDEgRhWDE3FVjBdW4=
 		</data>
-		<key>Modules/Aquino.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/Aquino.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		9V+lyOJbqjD15ErIjpd61EjZ6Zw=
+		pjtg2xF7pf2I+gHa/VpnkXvpqxQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,46 +61,46 @@
 			QLznQlycWU3ijZBkXU4udmtR2d5cfAV+7bBsOYqWI+A=
 			</data>
 		</dict>
-		<key>Modules/Aquino.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<key>Modules/Aquino.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7hSa6ZJAbesPViJ3Zk9XAAfILVEx+gBTTPa6oomar2c=
+			SdOJ692AR2KBSimRLGEloY3IFiWJW11g3yH6dYkUQdI=
 			</data>
 		</dict>
-		<key>Modules/Aquino.swiftmodule/Project/x86_64.swiftsourceinfo</key>
+		<key>Modules/Aquino.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7hSa6ZJAbesPViJ3Zk9XAAfILVEx+gBTTPa6oomar2c=
+			SdOJ692AR2KBSimRLGEloY3IFiWJW11g3yH6dYkUQdI=
 			</data>
 		</dict>
-		<key>Modules/Aquino.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vSaRI05Mn5wnv3wAQ4xwfjIleW5le2wGlxAe4L/tzzY=
+			A9J3+sj6v4c92+VY4JREJmX7TbLcUQUF1fDEkoo/6dA=
 			</data>
 		</dict>
-		<key>Modules/Aquino.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cE8KnLH+zwmLoy5pIHPq/3U5hyo3FL6gPL4OmwTFEjQ=
+			oC3yGz9bn7mzjTljW77Eq2WFMlV6qbx5u/HLDizu/6o=
 			</data>
 		</dict>
-		<key>Modules/Aquino.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/Aquino.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vSaRI05Mn5wnv3wAQ4xwfjIleW5le2wGlxAe4L/tzzY=
+			A9J3+sj6v4c92+VY4JREJmX7TbLcUQUF1fDEkoo/6dA=
 			</data>
 		</dict>
-		<key>Modules/Aquino.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/Aquino.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cE8KnLH+zwmLoy5pIHPq/3U5hyo3FL6gPL4OmwTFEjQ=
+			oC3yGz9bn7mzjTljW77Eq2WFMlV6qbx5u/HLDizu/6o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
