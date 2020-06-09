@@ -11,23 +11,45 @@ import XCTest
 
 class WeatherUITests: XCTestCase {
     let app = XCUIApplication()
+    let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
     
     override func setUp() {
         super.setUp()
-        XCUIApplication().launch()
+        app.launch()
     }
 
     func testHomeElements() throws {
+        app.buttons.element.tap()
+        let passcodeInput = springboard.secureTextFields["Passcode field"]
+        passcodeInput.tap()
+        passcodeInput.typeText("abc\r")
+        
         XCTAssert(app.staticTexts["Home"].exists)
         XCTAssert(app.buttons["Next"].exists)
         app.buttons["Next"].tap()
     }
     
     func testCurrentWeatherElements() throws {
+        app.buttons.element.tap()
+        let passcodeInput = springboard.secureTextFields["Passcode field"]
+        passcodeInput.tap()
+        passcodeInput.typeText("abc\r")
+        
+        XCTAssert(app.staticTexts["Home"].exists)
         XCTAssert(app.buttons["Next"].exists)
         app.buttons["Next"].tap()
         
         XCTAssert(app.buttons["Back"].exists)
         app.buttons["Back"].tap()
     }
+    
+    func testSecurityScreen() throws {
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+
+        app.buttons.element.tap()
+        let passcodeInput = springboard.secureTextFields["Passcode field"]
+        passcodeInput.tap()
+        passcodeInput.typeText("abc\r")
+    }
+
 }
