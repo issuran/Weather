@@ -1,18 +1,25 @@
 PODS:
+  - Keys (1.0.1)
   - KIF (3.7.9):
     - KIF/Core (= 3.7.9)
   - KIF/Core (3.7.9)
 
 DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
   - KIF
 
 SPEC REPOS:
   trunk:
     - KIF
 
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
 SPEC CHECKSUMS:
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
 
-PODFILE CHECKSUM: 8ba7c31a98dd6b36b641c2f111af09f1097235e2
+PODFILE CHECKSUM: 3d5f8fe594325a0c8ddd568bbcdbeefebfd644b2
 
 COCOAPODS: 1.9.3

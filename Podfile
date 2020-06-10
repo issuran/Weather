@@ -4,6 +4,12 @@
 target 'Weather' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  
+  plugin 'cocoapods-keys', {
+    :project => "Weather",
+    :keys => [
+      "ApiKey"
+  ]}
 
   # Pods for Weather
 end

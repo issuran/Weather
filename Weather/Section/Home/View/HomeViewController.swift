@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Keys
 
 class HomeViewController: BaseViewController {
     
@@ -16,6 +17,8 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func goNext(_ sender: Any) {
+        let keys = WeatherKeys()
+        debugPrint(keys.apiKey)
         coordinator?.currentWeather()
         
         /// Testando framework
