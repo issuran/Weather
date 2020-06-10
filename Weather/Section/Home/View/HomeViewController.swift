@@ -8,12 +8,24 @@
 
 import UIKit
 import Keys
+import CoreLocation
 
 class HomeViewController: BaseViewController {
+    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        locationManager.requestWhenInUseAuthorization()
+        var currentLocation: CLLocation!
+        if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == .authorizedAlways) {
+            currentLocation = locationManager.location
+            debugPrint(currentLocation.coordinate.latitude)
+            debugPrint(currentLocation.coordinate.longitude)
+        }
     }
     
     @IBAction func goNext(_ sender: Any) {
