@@ -26,15 +26,21 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func goNext(_ sender: Any) {
-        let keys = WeatherKeys()
-        debugPrint(keys.apiKey)
         drawScreen()
+        
 //        coordinator?.currentWeather()
     }
     
     func drawScreen() {
-        let model = viewModel?.getWeather(latitude: "\(currentLocation.coordinate.latitude)",
-                                          longitude: "\(currentLocation.coordinate.longitude)")
+        DispatchQueue.main.async {
+            self.startLoading()
+            self.viewModel?.getWeather(latitude: "\(self.currentLocation.coordinate.latitude)",
+            longitude: "\(self.currentLocation.coordinate.longitude)") { (forecast) in
+                guard let forecast = forecast else { return }
+                self.stopLoading()
+                print(forecast)
+            }
+        }
     }
 }
 
@@ -69,13 +75,15 @@ extension HomeViewController: CLLocationManagerDelegate {
         if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == .authorizedAlways) {
             currentLocation = locationManager.location
-            debugPrint(currentLocation.coordinate.latitude)
-            debugPrint(currentLocation.coordinate.longitude)
-            lookUpCurrentLocation { (placemark) in
-                debugPrint(placemark?.country ?? "no country\n")
-                debugPrint(placemark?.locality ?? "no locality\n")
-                debugPrint(placemark?.administrativeArea ?? "no administrativeArea\n")
-            }
+//            debugPrint(currentLocation.coordinate.latitude)
+//            debugPrint(currentLocation.coordinate.longitude)
+//            lookUpCurrentLocation { (placemark) in
+//                debugPrint(placemark?.country ?? "no country\n")
+//                debugPrint(placemark?.locality ?? "no locality\n")
+//                debugPrint(placemark?.administrativeArea ?? "no administrativeArea\n")
+//            }
+        } else {
+            // Draw generic screen
         }
     }
 }

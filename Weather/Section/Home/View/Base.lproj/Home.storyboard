@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KSl-ig-B9N" firstAttribute="leading" secondItem="7Id-eM-8ng" secondAttribute="leading" constant="10" id="EkK-e2-EA9"/>
                             <constraint firstItem="aot-D2-3kQ" firstAttribute="centerY" secondItem="goD-s3-41N" secondAttribute="centerY" id="Xc0-Pm-9kc"/>

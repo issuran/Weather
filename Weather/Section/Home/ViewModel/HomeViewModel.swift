@@ -11,17 +11,18 @@ import Foundation
 class HomeViewModel {
     
     let service = ForecastService()
-    var bla: ForecastModel?
+    var forecastModel: ForecastModel?
     
-    func getWeather(latitude: String, longitude: String, unit: String = "metric") -> ForecastModel? {
+    func getWeather(latitude: String, longitude: String, unit: String = "metric", completion: @escaping (ForecastModel?) -> Void) -> Void {
         service.getWeather(latitude: latitude, longitude: longitude) { (result) in
             switch result {
             case .success(let model, _):
-                self.bla = model
+                self.forecastModel = model
             case .failure(_), .empty:
-                self.bla = nil
+                self.forecastModel = nil
             }
+            
+            completion(self.forecastModel)
         }
-        return bla
     }
 }
