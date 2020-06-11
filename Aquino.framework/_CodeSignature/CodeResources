@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/Aquino.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		GBqI5u1VAN5Br9SmGR1lzvgzzas=
+		qmEj88Q/AyKGfl+mzwM6NBmctXs=
 		</data>
 		<key>Modules/Aquino.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		GBqI5u1VAN5Br9SmGR1lzvgzzas=
+		qmEj88Q/AyKGfl+mzwM6NBmctXs=
 		</data>
 		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		pjtg2xF7pf2I+gHa/VpnkXvpqxQ=
+		2z4CW9kc7bpjoGaZ2LHioASGDA8=
 		</data>
 		<key>Modules/Aquino.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/Aquino.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		pjtg2xF7pf2I+gHa/VpnkXvpqxQ=
+		2z4CW9kc7bpjoGaZ2LHioASGDA8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,14 +65,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SdOJ692AR2KBSimRLGEloY3IFiWJW11g3yH6dYkUQdI=
+			+cdtywFq5E3yIrbhlzMIQ7aIXf/WT/3XkLhbp4z0NzM=
 			</data>
 		</dict>
 		<key>Modules/Aquino.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SdOJ692AR2KBSimRLGEloY3IFiWJW11g3yH6dYkUQdI=
+			+cdtywFq5E3yIrbhlzMIQ7aIXf/WT/3XkLhbp4z0NzM=
 			</data>
 		</dict>
 		<key>Modules/Aquino.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oC3yGz9bn7mzjTljW77Eq2WFMlV6qbx5u/HLDizu/6o=
+			lDJ81Do6EtX+KAGrstT2inLVnd+mxcWjXRbiiTmK0z8=
 			</data>
 		</dict>
 		<key>Modules/Aquino.swiftmodule/arm64.swiftdoc</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oC3yGz9bn7mzjTljW77Eq2WFMlV6qbx5u/HLDizu/6o=
+			lDJ81Do6EtX+KAGrstT2inLVnd+mxcWjXRbiiTmK0z8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

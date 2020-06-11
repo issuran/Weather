@@ -15,7 +15,33 @@ class HomeViewController: BaseViewController {
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
+    @IBOutlet weak var cityLabel: UIButton!
+    @IBOutlet weak var todayDateLabel: UILabel!
+    
+    @IBOutlet weak var currentTemperature: UILabel!
+    @IBOutlet weak var minTemperatureLabel: UILabel!
+    @IBOutlet weak var maxTemperatureLabel: UILabel!
+    @IBOutlet weak var currentSkyDescriptionLabel: UILabel!
+    @IBOutlet weak var imgWeather: UIImageView!
+    @IBOutlet weak var skyDetailDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var feelsLikeLabel: UILabel!
+    @IBOutlet weak var windSpeedLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    
     var viewModel: HomeViewModel?
+    
+    enum LocaleState {
+        case allowed, denied
+    }
+    
+    var state = LocaleState.denied {
+        didSet {
+            if state == .allowed {
+                drawScreen()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +49,6 @@ class HomeViewController: BaseViewController {
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
-    }
-    
-    @IBAction func goNext(_ sender: Any) {
-        drawScreen()
-        
-//        coordinator?.currentWeather()
     }
     
     func drawScreen() {
@@ -39,7 +59,36 @@ class HomeViewController: BaseViewController {
                 guard let forecast = forecast else { return }
                 self.stopLoading()
                 print(forecast)
+                self.fillScreenDetails(forecast)
             }
+        }
+    }
+    
+    func fillScreenDetails(_ forecast: ForecastModel) {
+        DispatchQueue.main.async {
+            self.cityLabel.setTitle(forecast.name, for: .normal)
+            
+            let date = Date()
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            
+            dateFormatter.locale = Locale(identifier: "en_US")
+            dateFormatter.string(from: date)
+            
+            self.todayDateLabel.text = dateFormatter.string(from: date)
+            
+            self.currentTemperature.text = "\(forecast.main.temp) ºC"
+            self.minTemperatureLabel.text = "min: \(forecast.main.temp_min) ºC"
+            self.maxTemperatureLabel.text = "max: \(forecast.main.temp_max) ºC"
+            self.currentSkyDescriptionLabel.text = forecast.weather.first?.main
+            let description = forecast.weather.first?.description
+            self.skyDetailDescriptionLabel.text = description?.capitalizingFirstLetter()
+            
+            self.feelsLikeLabel.text = "\(forecast.main.feels_like) ºC Feels like"
+            self.windSpeedLabel.text = "\(forecast.wind.speed) m/s Wind"
+            self.humidityLabel.text = "\(forecast.main.humidity)% Humidity"
         }
     }
 }
@@ -75,6 +124,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == .authorizedAlways) {
             currentLocation = locationManager.location
+            state = .allowed
 //            debugPrint(currentLocation.coordinate.latitude)
 //            debugPrint(currentLocation.coordinate.longitude)
 //            lookUpCurrentLocation { (placemark) in
@@ -84,6 +134,7 @@ extension HomeViewController: CLLocationManagerDelegate {
 //            }
         } else {
             // Draw generic screen
+            state = .denied
         }
     }
 }
