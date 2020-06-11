@@ -9,6 +9,7 @@
 import UIKit
 import Keys
 import CoreLocation
+import Kingfisher
 
 class HomeViewController: BaseViewController {
     
@@ -83,12 +84,37 @@ class HomeViewController: BaseViewController {
             self.minTemperatureLabel.text = "min: \(forecast.main.temp_min) ºC"
             self.maxTemperatureLabel.text = "max: \(forecast.main.temp_max) ºC"
             self.currentSkyDescriptionLabel.text = forecast.weather.first?.main
-            let description = forecast.weather.first?.description
-            self.skyDetailDescriptionLabel.text = description?.capitalizingFirstLetter()
+            let description = forecast.weather.first?.description ?? ""
+            self.skyDetailDescriptionLabel.text = description.capitalizingFirstLetter()
             
             self.feelsLikeLabel.text = "\(forecast.main.feels_like) ºC Feels like"
             self.windSpeedLabel.text = "\(forecast.wind.speed) m/s Wind"
             self.humidityLabel.text = "\(forecast.main.humidity)% Humidity"
+            
+            let icon = forecast.weather.first?.icon ?? ""
+            let urlString = "https://openweathermap.org/img/wn/\(icon)@2x.png"
+            let url = URL(string: urlString)
+            let processor = DownsamplingImageProcessor(size: self.imgWeather.bounds.size)
+                |> RoundCornerImageProcessor(cornerRadius: 20)
+            self.imgWeather.kf.indicatorType = .activity
+            self.imgWeather.kf.setImage(
+                with: url,
+                placeholder: nil,
+                options: [
+                    .processor(processor),
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+                ])
+            {
+                result in
+                switch result {
+                case .success(let value):
+                    debugPrint("Task done for: \(value.source.url?.absoluteString ?? "")")
+                case .failure(let error):
+                    debugPrint("Job failed: \(error.localizedDescription)")
+                }
+            }
         }
     }
 }

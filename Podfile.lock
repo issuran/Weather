@@ -3,14 +3,19 @@ PODS:
   - KIF (3.7.9):
     - KIF/Core (= 3.7.9)
   - KIF/Core (3.7.9)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
   - KIF
+  - Kingfisher
 
 SPEC REPOS:
   trunk:
     - KIF
+    - Kingfisher
 
 EXTERNAL SOURCES:
   Keys:
@@ -19,7 +24,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
 
-PODFILE CHECKSUM: 3d5f8fe594325a0c8ddd568bbcdbeefebfd644b2
+PODFILE CHECKSUM: 813f621e158106d2f7c05c2743b16406a0de33b1
 
 COCOAPODS: 1.9.3
