@@ -15,6 +15,8 @@ class HomeViewController: BaseViewController {
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
+    var viewModel: HomeViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -26,29 +28,23 @@ class HomeViewController: BaseViewController {
     @IBAction func goNext(_ sender: Any) {
         let keys = WeatherKeys()
         debugPrint(keys.apiKey)
-        coordinator?.currentWeather()
-        
-//        /// Testando framework
-//        let service = SignScrapService()
-//        service.getSignToday(sign: "Libra") { (result) in
-//            switch result {
-//            case .success(_, _):
-//                print("Sucesso")
-//            case .failure(_):
-//                print("Failure")
-//            case .empty:
-//                print("Empty")
-//            }
-//        }
-//        /// Fim do teste
+        drawScreen()
+//        coordinator?.currentWeather()
     }
     
+    func drawScreen() {
+        let model = viewModel?.getWeather(latitude: "\(currentLocation.coordinate.latitude)",
+                                          longitude: "\(currentLocation.coordinate.longitude)")
+    }
+}
+
+extension HomeViewController {
     func lookUpCurrentLocation(completionHandler: @escaping (CLPlacemark?) -> Void) {
-        // Use the last reported location.
+        /// Use the last reported location.
         if let lastLocation = self.locationManager.location {
             let geocoder = CLGeocoder()
                 
-            // Look up the location and pass it to the completion handler
+            /// Look up the location and pass it to the completion handler
             geocoder.reverseGeocodeLocation(lastLocation,
                         completionHandler: { (placemarks, error) in
                 if error == nil {
@@ -56,13 +52,13 @@ class HomeViewController: BaseViewController {
                     completionHandler(firstLocation)
                 }
                 else {
-                 // An error occurred during geocoding.
+                 /// An error occurred during geocoding.
                     completionHandler(nil)
                 }
             })
         }
         else {
-            // No location was available.
+            /// No location was available.
             completionHandler(nil)
         }
     }
@@ -73,6 +69,8 @@ extension HomeViewController: CLLocationManagerDelegate {
         if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == .authorizedAlways) {
             currentLocation = locationManager.location
+            debugPrint(currentLocation.coordinate.latitude)
+            debugPrint(currentLocation.coordinate.longitude)
             lookUpCurrentLocation { (placemark) in
                 debugPrint(placemark?.country ?? "no country\n")
                 debugPrint(placemark?.locality ?? "no locality\n")
