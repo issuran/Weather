@@ -1,5 +1,5 @@
 PODS:
-  - Aquino (1.0.0)
+  - Aquino (1.0.1)
   - Keys (1.0.1)
   - KIF (3.7.9):
     - KIF/Core (= 3.7.9)
@@ -9,28 +9,27 @@ PODS:
   - Kingfisher/Core (5.14.0)
 
 DEPENDENCIES:
-  - Aquino (from `../Aquino`)
+  - Aquino (= 1.0.1)
   - Keys (from `Pods/CocoaPodsKeys`)
   - KIF
   - Kingfisher
 
 SPEC REPOS:
   trunk:
+    - Aquino
     - KIF
     - Kingfisher
 
 EXTERNAL SOURCES:
-  Aquino:
-    :path: "../Aquino"
   Keys:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
-  Aquino: 488f57faafba1162f7ad4072f92b2232c3bb47fb
+  Aquino: d302e40ba434dfda1990bbf315c5106ebbbf2c6e
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
 
-PODFILE CHECKSUM: 368734277e736467f33b23d6603241f4572bef2e
+PODFILE CHECKSUM: f127677ec46c6a98390c97d387f1b7df4b7a8fb1
 
 COCOAPODS: 1.9.3
