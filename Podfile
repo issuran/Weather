@@ -3,6 +3,7 @@
 
 def shared_pods
   pod 'Kingfisher'
+  pod 'Aquino', :path => "../Aquino"
 end
 
 target 'Weather' do

@@ -150,6 +150,11 @@ extension HomeViewController: CLLocationManagerDelegate {
         if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == .authorizedAlways) {
             currentLocation = locationManager.location
+            if currentLocation != nil {
+                state = .allowed
+            } else {
+                state = .denied
+            }
             state = .allowed
 //            debugPrint(currentLocation.coordinate.latitude)
 //            debugPrint(currentLocation.coordinate.longitude)
