@@ -69,16 +69,7 @@ class HomeViewController: BaseViewController {
         DispatchQueue.main.async {
             self.cityLabel.setTitle(forecast.name, for: .normal)
             
-            let date = Date()
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .none
-            
-            dateFormatter.locale = Locale(identifier: "en_US")
-            dateFormatter.string(from: date)
-            
-            self.todayDateLabel.text = dateFormatter.string(from: date)
+            self.todayDateLabel.text = self.viewModel?.formattedDate()
             
             self.currentTemperature.text = "\(forecast.main.temp) ºC"
             self.minTemperatureLabel.text = "min: \(forecast.main.temp_min) ºC"
@@ -91,9 +82,8 @@ class HomeViewController: BaseViewController {
             self.windSpeedLabel.text = "\(forecast.wind.speed) m/s Wind"
             self.humidityLabel.text = "\(forecast.main.humidity)% Humidity"
             
-            let icon = forecast.weather.first?.icon ?? ""
-            let urlString = "https://openweathermap.org/img/wn/\(icon)@2x.png"
-            let url = URL(string: urlString)
+            let url = self.viewModel?.iconUrl(forecast.weather.first?.icon ?? "")
+            
             let processor = DownsamplingImageProcessor(size: self.imgWeather.bounds.size)
                 |> RoundCornerImageProcessor(cornerRadius: 20)
             self.imgWeather.kf.indicatorType = .activity
@@ -156,15 +146,8 @@ extension HomeViewController: CLLocationManagerDelegate {
                 state = .denied
             }
             state = .allowed
-//            debugPrint(currentLocation.coordinate.latitude)
-//            debugPrint(currentLocation.coordinate.longitude)
-//            lookUpCurrentLocation { (placemark) in
-//                debugPrint(placemark?.country ?? "no country\n")
-//                debugPrint(placemark?.locality ?? "no locality\n")
-//                debugPrint(placemark?.administrativeArea ?? "no administrativeArea\n")
-//            }
         } else {
-            // Draw generic screen
+            /// TODO : Draw generic screen
             state = .denied
         }
     }

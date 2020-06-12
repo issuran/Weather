@@ -25,4 +25,24 @@ class HomeViewModel {
             completion(self.forecastModel)
         }
     }
+    
+    func formattedDate() -> String {
+
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.string(from: date)
+        
+        return dateFormatter.string(from: date)
+    }
+    
+    func iconUrl(_ icon: String) -> URL? {
+        let urlString = "https://openweathermap.org/img/wn/\(icon)@2x.png"
+        
+        return URL(string: urlString)
+    }
 }
