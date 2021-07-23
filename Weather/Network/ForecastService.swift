@@ -9,7 +9,7 @@
 import Foundation
 import Aquino
 
-class ForecastService: Provider {
+class ForecastService {
     let provider = Provider()
     
     func getWeather(latitude: String, longitude: String, unitMetric: String = "metric", completion: @escaping (Result<ForecastModel, Error>) -> Void) -> Void {
