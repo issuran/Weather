@@ -16,9 +16,9 @@ class HomeViewModel {
     func getWeather(latitude: String, longitude: String, unit: String = "metric", completion: @escaping (ForecastModel?) -> Void) -> Void {
         service.getWeather(latitude: latitude, longitude: longitude) { (result) in
             switch result {
-            case .success(let model, _):
+            case .success(let model):
                 self.forecastModel = model
-            case .failure(_), .empty:
+            case .failure(_):
                 self.forecastModel = nil
             }
             
