@@ -3,7 +3,7 @@
 
 def shared_pods
   pod 'Kingfisher'
-  pod 'Aquino', '1.0.3'
+  pod 'Aquino', '1.0.6'
 end
 
 target 'Weather' do
